@@ -71,3 +71,7 @@ possible <table> css classes are:
  * chart_type_bar_3d - Show the graph as a bar_3d chart
  * table_hidden - default the table to hidden
  * chart_hidden - default the chart to hidden
+
+You can style the chart using the style sheet: 'flash_chart_style.css' in the css folder of the download, please see the comments in there for more info. The chart id for css and javascript is 'flash_chart_'+the_table_id.
+
+take a look at the download for working examples.
