@@ -14,7 +14,7 @@ To use you need to include the javascript in the head of your page:
 <script src="js/jquery/jquery.js" type="text/JavaScript"></script>
 <script src="js/openflashchart/js/swfobject.js" type="text/JavaScript"></script>
 <script type="text/javascript" src="js/openflashchart/js/json2.js"></script>
-<script type="text/javascript" src="js/auto-table-to-chart.js"></script>
+<script type="text/javascript" src="js/attc.js"></script>
 }}}
 
 and then add the basic css to the head:
@@ -64,14 +64,24 @@ to get a basic bar graph you add some css classes to the <table> tag and the <th
 </tbody>
 <table>
 }}}
-possible <table> css classes are:
+possible <table> css classes to setup the graph are:
  * graph_table - needed to get the table to be converted to a graph on page load
  * chart_type_pie - Show the graph as a pie chart
  * chart_type_bar - Show the graph as a bar chart
  * chart_type_bar_3d - Show the graph as a bar_3d chart
+ * chart_type_line - Show the graph as a line chart
  * table_hidden - default the table to hidden
  * chart_hidden - default the chart to hidden
 
+possible <th> css classes to setup the plots are:
+
+ * graph_id the x axis labels (only one <th> can should this class)
+ * graph_value the y axis values (multiple <th> can have this class, unless it is a pie chart, then only one is used)
+ * graph_value_stack combined with * chart_type_bar shows the values stacked on top of one another - use instead of 'graph_value'
+ * skip#_#_#_# - where # are the row numbers to skip
+ * steps_# - where # is the value of steps to use on the y axis, overrides the automatic calculation of steps (only one <th> should have this class) 
+ 
+
 You can style the chart using the style sheet: 'flash_chart_style.css' in the css folder of the download, please see the comments in there for more info. The chart id for css and javascript is 'flash_chart_'+the_table_id.
 
-take a look at the download for working examples.
+take a look at the download for working examples of the various css class options.
