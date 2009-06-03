@@ -42,7 +42,7 @@ Your table should be of the format:
 }}}
 as the script looks for <thead> and <tbody> sections to get its information, <tfoot> can be used but is ignored at present
 
-to get a basic bar graph you add some css classes to the <table> tag and the <th> tags - like this:
+to get a basic bar graph you add some css classes to the {{{<table>}}} tag and the {{{<th>}}} tags - like this:
 {{{
 <table class="graph_table chart_type_pie" id="a_table">
 <caption>Some totals</caption>
@@ -64,7 +64,7 @@ to get a basic bar graph you add some css classes to the <table> tag and the <th
 </tbody>
 <table>
 }}}
-possible <table> css classes to setup the graph are:
+possible {{{<table>}}} css classes to setup the graph are:
  * graph_table - needed to get the table to be converted to a graph on page load
  * chart_type_pie - Show the graph as a pie chart
  * chart_type_bar - Show the graph as a bar chart
@@ -73,13 +73,13 @@ possible <table> css classes to setup the graph are:
  * table_hidden - default the table to hidden
  * chart_hidden - default the chart to hidden
 
-possible <th> css classes to setup the plots are:
+possible {{{<th>}}} css classes to setup the plots are:
 
- * graph_id the x axis labels (only one <th> can should this class)
- * graph_value the y axis values (multiple <th> can have this class, unless it is a pie chart, then only one is used)
- * graph_value_stack combined with * chart_type_bar shows the values stacked on top of one another - use instead of 'graph_value'
- * skip#_#_#_# - where # are the row numbers to skip
- * steps_# - where # is the value of steps to use on the y axis, overrides the automatic calculation of steps (only one <th> should have this class) 
+ * graph_id the x axis labels (only one {{{<th>}}} can should this class)
+ * graph_value the y axis values (multiple {{{<th>}}} can have this class, unless it is a pie chart, then only one is used)
+ * graph_value_stack combined with 'chart_type_bar' shows the values stacked on top of one another - use instead of 'graph_value'
+ * skip{{{#_#_#_#}}} - where # are the row numbers to skip
+ * steps{{{_#}}} - where # is the value of steps to use on the y axis, overrides the automatic calculation of steps (only one {{{<th>}}} should have this class) 
  
 
 You can style the chart using the style sheet: 'flash_chart_style.css' in the css folder of the download, please see the comments in there for more info. The chart id for css and javascript is 'flash_chart_'+the_table_id.
