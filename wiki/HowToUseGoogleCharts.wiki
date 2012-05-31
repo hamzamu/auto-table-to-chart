@@ -2,9 +2,9 @@
 
 = Prerequisite =
 
-jQuery
-Google jsapi
-The attc.googleCharts.js file
+  * jQuery
+  * Google jsapi
+  * The attc.googleCharts.js file
 
 
 = Setup =
