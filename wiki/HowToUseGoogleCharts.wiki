@@ -1,0 +1,77 @@
+#summary Configure the chart on your page.
+
+= Prerequisite =
+
+jQuery
+Google jsapi
+The attc.googleCharts.js file
+
+
+= Setup =
+
+Add the following to your html head (assuming attc.googleCharts.js is in the same folder as the html page):
+{{{
+<head>
+    <script type="text/javascript" src="//www.google.com/jsapi"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="attc.googleCharts.js"></script>
+</head>
+}}}
+
+Then create a html table - note thead and tbody elements!:
+{{{
+<table>
+			<thead>
+				<tr>
+					<th id="pieDescription">Description</th>
+					<th id="pieValues">Sessions</th>
+					<th>%</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Present</td>
+					<td>405</td>
+					<td>89</td>
+				</tr>
+				<tr>
+					<td>Missing</td>
+					<td>1</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Authorised Absent</td>
+					<td>36</td>
+					<td>7</td>
+				</tr>
+				<tr>
+					<td>Unauthorised Absent</td>
+					<td>1</td>
+					<td>0</td>
+				</tr>
+				<tr>
+					<td>Late</td>
+					<td>10</td>
+					<td>2</td>
+				</tr>
+			</tbody>
+		</table>
+}}}
+
+then add the data attributes to the table, googleOptions is a pass through of the options for each chart, based on google's chart options:
+{{{
+title="Attendance Percentages" 
+    		id="AttendancePercentages" 
+    		summary="pieDescription" 
+    		data-attc-colDescription="pieDescription" 
+    		data-attc-colValues="pieValues" 
+    		data-attc-location="AttendancePercentagesPie" 
+    		data-attc-hide="true" 
+    		data-attc-type="pie"
+    		data-attc-googleOptions='{"is3D":true}'
+}}}
+
+Finally add the div to hold the chart:
+{{{
+<div id="AttendancePercentagesPie" style="width:800px; height:600px;border:1px solid black;border-radius:5px"></div>
+}}}
