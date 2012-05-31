@@ -58,8 +58,9 @@ Then create a html table - note thead and tbody elements!:
 		</table>
 }}}
 
-then add the data attributes to the table, googleOptions is a pass through of the options for each chart, based on google's chart options:
+then add the data attributes to the table tag, googleOptions is a pass through of the options for each chart, based on google's chart options:
 {{{
+<table
 title="Attendance Percentages" 
     		id="AttendancePercentages" 
     		summary="pieDescription" 
@@ -69,9 +70,17 @@ title="Attendance Percentages"
     		data-attc-hide="true" 
     		data-attc-type="pie"
     		data-attc-googleOptions='{"is3D":true}'
+>
 }}}
 
-Finally add the div to hold the chart:
+Add the div to hold the chart:
 {{{
 <div id="AttendancePercentagesPie" style="width:800px; height:600px;border:1px solid black;border-radius:5px"></div>
+}}}
+
+Finally call the script on page load, on the table element:
+{{{
+$(document).ready(function(){
+	$('#AttendancePercentages').attc();
+});
 }}}
