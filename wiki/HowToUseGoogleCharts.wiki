@@ -1,4 +1,5 @@
 #summary Configure the chart on your page.
+#labels Featured
 
 = Prerequisite =
 
