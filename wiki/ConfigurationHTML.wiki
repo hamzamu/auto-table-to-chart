@@ -1,4 +1,5 @@
 #summary Configuration of the plugin via html data attributes
+#labels Featured
 
 = Options =
 
