@@ -27,7 +27,7 @@ Then create a html table - note thead and tbody elements!:
 			<thead>
 				<tr>
 					<th id="colDescription">Description</th>
-					<th id="colValues1">Sessions</th>
+					<th id="colValue1">Sessions</th>
 					<th>%</th>
 				</tr>
 			</thead>
