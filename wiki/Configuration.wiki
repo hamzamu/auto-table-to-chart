@@ -5,11 +5,26 @@
 {{{
 .attc(
 location:elementId,
-hide : true/false,
+tableHide : true/false,
+chartHide : true/false,
 type:'bar/pie/column/area/etc',
 googleOptions:{
   Google chart options: [https://developers.google.com/chart/interactive/docs/gallery/piechart#Configuration_Options Pie chart option]
 }
+'controls':{
+showHide:true/false,
+create:true/false,
+chartType:true/false
+},
+'controlsLabels':{
+showChart:"Show chart",
+hideChart:"Hide chart",
+showTable:"Show table",
+hideTable:"Hide table",
+createChart:"Edit chart",
+changeChart:"Change chart"
+},
+chartOptionList:'<option value="bar">Bar</option><option value="pie">Pie</option><option value="column">Column</option><option value="area">Area</option><option value="line">Line</option>'
 )
 }}}
 
@@ -43,3 +58,33 @@ googleOptions:{}
 }}}
 Object containing options to use when creating the chart, these are simply passed through to google for setting up the chart, details for pie charts here:
 [https://developers.google.com/chart/interactive/docs/gallery/piechart#Configuration_Options Google Pie chart options]
+
+=controls=
+{{{
+controls:{
+showHide:true/false,
+create:true/false,
+chartType:true/false
+}
+}}}
+Object containing options for the controls that appear above the table, to allow chart editing/changing and show/hide table and chart.
+
+=controlsLabels=
+{{{
+'controlsLabels':{
+showChart:"Show chart",
+hideChart:"Hide chart",
+showTable:"Show table",
+hideTable:"Hide table",
+createChart:"Edit chart",
+changeChart:"Change chart"
+}
+}}}
+Text labels that will appear next to the controls of the chart.
+
+=chartOptionList=
+{{{
+chartOptionList:'<option value="bar">Bar</option><option value="pie">Pie</option><option value="column">Column</option><option value="area">Area</option><option value="line">Line</option>'
+)
+}}}
+The values that appear in the select list of possible chart types. Remove charts from here that you do not want selecting for this table 
